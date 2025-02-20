@@ -1,10 +1,13 @@
-﻿using Angel_Morel_Ap_Ap1.Service;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Angel_Morel_Ap_Ap1.Models;
 
-namespace Angel_Morel_Ap_Ap1.Contexto
+namespace Angel_Morel_Ap_Ap1.DAL
 {
-    public class Contexto
+    public class Contexto : DbContext
     {
-        public DbSet<RegistroAportes> registroAportes { get; set; }
+        public Contexto(DbContextOptions<Contexto> options)
+              : base(options) { }
+
+        public DbSet<Aporte> Aporte { get; set; }
     }
 }
