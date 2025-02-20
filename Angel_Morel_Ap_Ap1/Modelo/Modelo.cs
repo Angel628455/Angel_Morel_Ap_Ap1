@@ -1,19 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Angel_Morel_Ap_Ap1.Modelo
+namespace Angel_Morel_Ap_Ap1.Models
 {
-    public class Modelo
+    public class Aporte
     {
-        public class RegistroAportes
-        {
-            [Key]
-            public int SistemaId { get; set; }
-
-            [Required(ErrorMessage = "El Campo Descripción es obligatorio ")]
-            public string Descripcion { get; set; }
-
-            [Required(ErrorMessage = "El Campo Descripción es obligatorio ")]
-            public string Complejidad { get; set; }
-        }
+        [Key]
+        public int AporteId { get; set; }
+        [Required(ErrorMessage = "La descripción es un campo requerido")]
+        public string Observacion { get; set; }
+        [Required(ErrorMessage = "La descripción es un campo requerido")]
+        public decimal Monto { get; set; }
+        [Required(ErrorMessage = "La descripción es un campo requerido")]
+        public string Persona { get; set; }
+        [Required(ErrorMessage = "La descripción es un campo requerido")]
+        public DateTime Fecha { get; set; }
     }
 }
